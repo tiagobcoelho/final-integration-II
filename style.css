@@ -1,0 +1,205 @@
+@font-face{
+    font-family:tngani ;
+    src: url('fonts/tngani.ttf');
+}
+@font-face{
+    font-family: aniroc;
+    src: url('fonts/Anironc-d9DK.ttf');
+}
+@font-face{
+    font-family: pb;
+    src: url('fonts/PartyBusiness-4B0K.ttf');
+}
+
+
+.row{
+    margin: 0;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background-color: #ff5f01;
+}
+
+.navbar-toggler-icon{
+    border: #ffffff;
+}
+
+.nav-item a {
+    font-family: aniroc;
+    color: #ffffff;
+}
+
+.nav-border{
+    border-right:1px solid rgba(255,255,255,.5);
+}
+
+/* CAROUSEL */
+
+.carousel-caption h1{
+    font-size: 3em;
+}
+
+.carousel-caption p{
+    font-size:2em;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-30%);
+    text-align: center;
+    font-family: pb;
+}
+/* FELLOWS TEXT */
+
+.fellows-text h3{
+    font-family: aniroc;
+    font-size: 1.5em;
+}
+
+.fellows-text span{
+    font-family: tngani;
+    color:#ff5f01 ;
+}
+
+/* CARDS */
+
+.card{
+    background-image: url('images/bg_dark.png');
+}
+
+.card-img-top{
+    position: relative;
+    filter: brightness(80%);
+}
+
+.card-img-overlay h3{
+    font-family: pb;
+    color: #ffffff;
+    font-size: 3.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#dead{
+    color: #ff5f01;
+    position: absolute;
+    top: 15%;
+    display: none;
+}
+
+#gimli{
+    text-decoration: line-through #ff5f01;
+}
+.reward{
+    background-color: rgba(255,255,255,.5);
+}
+.reward .reward-title{
+    display: block;
+}
+
+.reward p{
+    font-family: pb;
+    font-size: 2em;
+    margin: auto;
+}
+
+.coins{
+    color: #ff5f01;
+}
+
+.card-text{
+    font-family: pb;
+    color: #bbbbbb;
+    font-size: 2em;
+}
+
+/* CARDS REWARD HOVER EFFECT */
+
+.card:hover > .card-img-top{
+    filter: brightness(50%);
+}
+
+.card:hover > .card-img-overlay #dead{
+    display: flex;
+}
+
+.card-img-overlay .reward{
+    display: none;
+}
+
+.card:hover > .card-img-overlay .reward{
+    display: flex;
+}
+
+/* CONTACT US */
+
+#contact-us{
+    background-image: url(images/bg_dark.png);
+}
+
+#contact-us h3{
+    font-family: pb;
+    color: #ffffff;
+}
+
+#contact-us h3 span{
+    font-family:tngani ;
+    color: #ff5f01;
+    display: inline;
+}
+
+/* FOOTER LINKS */
+
+footer{
+    background-color: #ff5f01;
+}
+
+footer a{
+    text-decoration: none;
+    font-family: aniroc;
+    margin: 5px 0;
+    
+    color:#ffffff;
+}
+footer img{
+    margin-top: 40px;
+    min-width: 100%;
+    height: 100%;
+}
+
+
+footer a:hover{
+    text-decoration: none;
+    color: rgb(210, 209, 209);
+}
+
+/* BORDER-RIGHT NAVBAR RESPONSIVE */
+
+@media (max-width:768px){
+    .nav-border{
+        border-right: none;
+    }
+}
+
+/* CAROUSEL CAPTION RESPONSIVE */
+
+@media (min-width: 900px){
+    .carousel-caption h1{
+        font-size: 3.5rem;
+    }
+    .carousel-caption p{
+        font-size: 2rem;
+    }
+}
+@media (min-width: 1200px){
+    .carousel-caption h1{
+        font-size: 5rem;
+    }
+    .carousel-caption p{
+        font-size: 3rem;
+    }
+}

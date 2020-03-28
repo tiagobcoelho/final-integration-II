@@ -1,0 +1,44 @@
+@mixin rings($size, $color) {
+    width: $size;
+    height: $size;
+    background: transparent;
+    border-radius: 50%;
+    border: $size/15 solid $color;
+    box-shadow: $size/25 $size/25 darken($color, 20%), inset $size/25 $size/25 darken($color, 20%) ;
+}
+
+@mixin section {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+$orange:#ff5f01;
+$yellow:#e9c704;
+$gray: #414141;
+
+.first-ring{
+    @include rings(40px,$orange);
+    margin: 0 10px;
+}
+
+.second-ring{
+    @include rings(200px, $yellow);
+    margin: 0 10px;
+}
+
+@for $i from 1 to 7 {
+    .ring-#{$i}{
+        @include rings(40px * (1 + $i/5) ,$gray );
+        margin: 0  -10px;
+    }
+}
+
+.section{
+    @include section();
+}
+
+.third{
+    @extend .section;
+    flex-direction: column;
+}
